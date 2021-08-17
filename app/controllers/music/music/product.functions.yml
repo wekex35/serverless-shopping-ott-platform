@@ -1,0 +1,55 @@
+getAllMusic: 
+  handler: handler.getAllMusic
+  events:
+    - http:
+        path: getAllMusic
+        method: get
+
+addMusic: 
+  handler: handler.addMusic
+  events:
+    - http:
+        path: addMusic
+        method: post
+
+updateMusic: 
+  handler: handler.updateMusic
+  events:
+    - http:
+        path: updateMusic
+        method: post
+
+deleteMusic:
+  handler: handler.deleteMusic
+  events:
+    - http:
+        path: deleteMusic
+        method: get
+
+getShoppingHomeScreen:
+  handler: handler.getShoppingHomeScreen
+  events:
+    - http:
+        path: getShoppingHomeScreen
+        method: get
+
+viewAllMusic:
+  handler: handler.viewAllMusic
+  events:
+    - http:
+        path: viewAllMusic
+        method: get
+
+getRelatedMusic:
+  handler: handler.getRelatedMusic
+  events:
+    - http:
+        path: getRelatedMusic
+        method: get
+
+getMusicById:
+  handler: handler.getMusicById
+  events:
+    - http:
+        path: getMusicById
+        method: get

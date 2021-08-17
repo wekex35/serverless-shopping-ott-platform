@@ -1,0 +1,31 @@
+createStripePaymentIntent: 
+  handler: handler.createStripePaymentIntent
+  events:
+    - http:
+        path: createStripePaymentIntent
+        method: post
+stripePaymentWebHook: 
+  handler: handler.stripePaymentWebHook
+  events:
+    - http:
+        path: stripePaymentWebHook
+        method: post
+createPaypalPaymentIntent: 
+  handler: handler.createPaypalPaymentIntent
+  events:
+    - http:
+        path: createPaypalPaymentIntent
+        method: post
+payPalPaymentWebHook: 
+  handler: handler.payPalPaymentWebHook
+  events:
+    - http:
+        path: payPalPaymentWebHook
+        method: post
+refundPayment: 
+  handler: handler.refundPayment
+  events:
+    - http:
+        path: refundPayment
+        method: post
+

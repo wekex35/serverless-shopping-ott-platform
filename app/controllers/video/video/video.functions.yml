@@ -1,0 +1,55 @@
+getAllVideo: 
+  handler: handler.getAllVideo
+  events:
+    - http:
+        path: getAllVideo
+        method: get
+
+addVideo: 
+  handler: handler.addVideo
+  events:
+    - http:
+        path: addVideo
+        method: post
+
+updateVideo: 
+  handler: handler.updateVideo
+  events:
+    - http:
+        path: updateVideo
+        method: post
+
+deleteVideo:
+  handler: handler.deleteVideo
+  events:
+    - http:
+        path: deleteVideo
+        method: get
+
+getShoppingHomeScreen:
+  handler: handler.getShoppingHomeScreen
+  events:
+    - http:
+        path: getShoppingHomeScreen
+        method: get
+
+viewAllVideo:
+  handler: handler.viewAllVideo
+  events:
+    - http:
+        path: viewAllVideo
+        method: get
+
+getRelatedVideo:
+  handler: handler.getRelatedVideo
+  events:
+    - http:
+        path: getRelatedVideo
+        method: get
+
+getVideoById:
+  handler: handler.getVideoById
+  events:
+    - http:
+        path: getVideoById
+        method: get

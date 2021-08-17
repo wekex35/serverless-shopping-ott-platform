@@ -1,0 +1,6 @@
+login: 
+  handler: app/controllers/auth/authentication.handler
+  events:
+    - http:
+        path: login
+        method: post

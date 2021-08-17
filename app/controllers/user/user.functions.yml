@@ -1,0 +1,36 @@
+getUser:
+  handler: handler.getUserDetails
+  events:
+    - http:
+        path: getUser
+        method: GET
+registerUser:
+  handler: handler.registerUser
+  events:
+    - http:
+        path: registerUser
+        method: POST
+updateUser:
+  handler: handler.updateUser
+  events:
+    - http:
+        path: updateUser
+        method: POST
+changeUserPassword:
+  handler: handler.changePassword
+  events:
+    - http:
+        path: changeUserPassword
+        method: POST
+forgotPassword:
+  handler: handler.forgotPassword
+  events:
+    - http:
+        path: forgotPassword
+        method: POST
+verifyOtpSetPassword:
+  handler: handler.verifyOtpSetPassword
+  events:
+    - http:
+        path: verifyOtpSetPassword
+        method: POST

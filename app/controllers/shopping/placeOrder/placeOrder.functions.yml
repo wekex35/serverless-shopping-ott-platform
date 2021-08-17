@@ -1,0 +1,34 @@
+getOrderHistory: 
+  handler: handler.getOrderHistory
+  events:
+    - http:
+        path: getOrderHistory
+        method: get
+
+placeOrder: 
+  handler: handler.placeOrder
+  events:
+    - http:
+        path: placeOrder
+        method: post
+
+updateOrderStatus: 
+  handler: handler.updateOrderStatus
+  events:
+    - http:
+        path: updateOrderStatus
+        method: post
+
+deleteOrder:
+  handler: handler.deleteOrder
+  events:
+    - http:
+        path: deleteOrder
+        method: get
+        
+orderPaymentIntent: 
+  handler: handler.orderPaymentIntent
+  events:
+    - http:
+        path: orderPaymentIntent
+        method: post

@@ -1,0 +1,27 @@
+getAllCategory: 
+  handler: handler.getAllCategory
+  events:
+    - http:
+        path: getAllCategory
+        method: get
+
+addCategory: 
+  handler: handler.addCategory
+  events:
+    - http:
+        path: addCategory
+        method: post
+
+updateCategory: 
+  handler: handler.updateCategory
+  events:
+    - http:
+        path: updateCategory
+        method: post
+
+deleteCategory:
+  handler: handler.deleteCategory
+  events:
+    - http:
+        path: deleteCategory
+        method: get

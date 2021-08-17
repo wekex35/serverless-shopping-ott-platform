@@ -1,0 +1,13 @@
+TransactionTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: TransactionTable
+    KeySchema:
+      - AttributeName: trans_id
+        KeyType: HASH
+    AttributeDefinitions:
+      - AttributeName: trans_id
+        AttributeType: 'S'
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1

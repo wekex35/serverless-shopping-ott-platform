@@ -1,0 +1,27 @@
+getAllCartItem: 
+  handler: handler.getAllCartItem
+  events:
+    - http:
+        path: getAllCartItem
+        method: get
+
+addCartItem: 
+  handler: handler.addCartItem
+  events:
+    - http:
+        path: addCartItem
+        method: post
+
+updateCartItem: 
+  handler: handler.updateCartItem
+  events:
+    - http:
+        path: updateCartItem
+        method: post
+
+deleteCartItem:
+  handler: handler.deleteCartItem
+  events:
+    - http:
+        path: deleteCartItem
+        method: get

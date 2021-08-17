@@ -1,0 +1,55 @@
+getAllProduct: 
+  handler: handler.getAllProduct
+  events:
+    - http:
+        path: getAllProduct
+        method: get
+
+addProduct: 
+  handler: handler.addProduct
+  events:
+    - http:
+        path: addProduct
+        method: post
+
+updateProduct: 
+  handler: handler.updateProduct
+  events:
+    - http:
+        path: updateProduct
+        method: post
+
+deleteProduct:
+  handler: handler.deleteProduct
+  events:
+    - http:
+        path: deleteProduct
+        method: get
+
+getShoppingHomeScreen:
+  handler: handler.getShoppingHomeScreen
+  events:
+    - http:
+        path: getShoppingHomeScreen
+        method: get
+
+viewAllProduct:
+  handler: handler.viewAllProduct
+  events:
+    - http:
+        path: viewAllProduct
+        method: get
+
+getRelatedProduct:
+  handler: handler.getRelatedProduct
+  events:
+    - http:
+        path: getRelatedProduct
+        method: get
+
+getProductById:
+  handler: handler.getProductById
+  events:
+    - http:
+        path: getProductById
+        method: get

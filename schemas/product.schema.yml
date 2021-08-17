@@ -1,0 +1,17 @@
+ProductTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: ProductTable
+    KeySchema:
+      - AttributeName: client_id
+        KeyType: HASH
+      - AttributeName: name 
+        KeyType: RANGE 
+    AttributeDefinitions:
+      - AttributeName: name
+        AttributeType: 'S'
+      - AttributeName: client_id
+        AttributeType: 'S'      
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1

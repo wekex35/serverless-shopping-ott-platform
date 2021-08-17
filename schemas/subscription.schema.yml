@@ -1,0 +1,17 @@
+SubscriptionTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: SubscriptionTable
+    KeySchema:
+      - AttributeName: code
+        KeyType: HASH
+      - AttributeName: client_id
+        KeyType: RANGE 
+    AttributeDefinitions:
+      - AttributeName: code
+        AttributeType: 'S'
+      - AttributeName: client_id
+        AttributeType: 'S'      
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1

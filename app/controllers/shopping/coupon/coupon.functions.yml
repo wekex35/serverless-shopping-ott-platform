@@ -1,0 +1,35 @@
+getAllCoupon: 
+  handler: handler.getAllCoupon
+  events:
+    - http:
+        path: getAllCoupon
+        method: get
+
+addCoupon: 
+  handler: handler.addCoupon
+  events:
+    - http:
+        path: addCoupon
+        method: post
+
+updateCoupon: 
+  handler: handler.updateCoupon
+  events:
+    - http:
+        path: updateCoupon
+        method: post
+
+deleteCoupon:
+  handler: handler.deleteCoupon
+  events:
+    - http:
+        path: deleteCoupon
+        method: get
+
+verifyCoupon:
+  handler: handler.verifyCoupon
+  events:
+    - http:
+        path: verifyCoupon
+        method: post
+

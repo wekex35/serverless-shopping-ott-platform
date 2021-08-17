@@ -1,0 +1,17 @@
+UserSubscriptionsTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: UserSubscriptionsTable
+    KeySchema:
+      - AttributeName: email
+        KeyType: HASH
+      - AttributeName: client_id
+        KeyType: RANGE
+    AttributeDefinitions:
+      - AttributeName: email
+        AttributeType: 'S'
+      - AttributeName: client_id
+        AttributeType: 'S'       
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1

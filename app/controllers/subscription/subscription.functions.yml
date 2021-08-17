@@ -1,0 +1,41 @@
+getSubscriptions: 
+  handler: handler.getSubscriptions
+  events:
+    - http:
+        path: getSubscription
+        method: get
+
+addSubscription: 
+  handler: handler.addSubscription
+  events:
+    - http:
+        path: addSubscription
+        method: post
+
+updateSubscription: 
+  handler: handler.updateSubscription
+  events:
+    - http:
+        path: updateSubscription
+        method: post
+
+buySubscription:
+  handler: handler.buySubscription
+  events:
+    - http:
+        path: buySubscription
+        method: post
+
+cancelSubscription:
+  handler: handler.cancelSubscription
+  events:
+    - http:
+        path: cancelSubscription
+        method: post
+
+upgradeSubscription:
+  handler: handler.upgradeSubscription
+  events:
+    - http:
+        path: upgradeSubscription
+        method: post

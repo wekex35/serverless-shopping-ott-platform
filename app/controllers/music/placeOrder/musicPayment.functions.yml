@@ -1,0 +1,34 @@
+getMusicPaymentHistory: 
+  handler: handler.getMusicPaymentHistory
+  events:
+    - http:
+        path: getMusicPaymentHistory
+        method: get
+
+musicPayment: 
+  handler: handler.musicPayment
+  events:
+    - http:
+        path: musicPayment
+        method: post
+
+updateMusicPaymentStatus: 
+  handler: handler.updateMusicPaymentStatus
+  events:
+    - http:
+        path: updateMusicPaymentStatus
+        method: post
+
+deleteMusicPayment:
+  handler: handler.deleteMusicPayment
+  events:
+    - http:
+        path: deleteMusicPayment
+        method: get
+        
+orderPaymentIntent: 
+  handler: handler.orderPaymentIntent
+  events:
+    - http:
+        path: orderPaymentIntent
+        method: post

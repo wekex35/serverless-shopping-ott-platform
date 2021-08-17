@@ -1,0 +1,27 @@
+getAllVideoCategory: 
+  handler: handler.getAllVideoCategory
+  events:
+    - http:
+        path: getAllVideoCategory
+        method: get
+
+addVideoCategory: 
+  handler: handler.addVideoCategory
+  events:
+    - http:
+        path: addVideoCategory
+        method: post
+
+updateVideoCategory: 
+  handler: handler.updateVideoCategory
+  events:
+    - http:
+        path: updateVideoCategory
+        method: post
+
+deleteVideoCategory:
+  handler: handler.deleteVideoCategory
+  events:
+    - http:
+        path: deleteVideoCategory
+        method: get

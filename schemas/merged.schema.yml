@@ -1,0 +1,163 @@
+SubscriptionTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: SubscriptionTable
+    KeySchema:
+      - AttributeName: code
+        KeyType: HASH
+      - AttributeName: client_id
+        KeyType: RANGE 
+    AttributeDefinitions:
+      - AttributeName: code
+        AttributeType: 'S'
+      - AttributeName: client_id
+        AttributeType: 'S'      
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1
+UserTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: UserTable
+    KeySchema:
+      - AttributeName: email
+        KeyType: HASH
+      - AttributeName: client_id
+        KeyType: RANGE
+    AttributeDefinitions:
+      - AttributeName: email
+        AttributeType: 'S'       
+      - AttributeName: client_id
+        AttributeType: 'S'
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1
+UserSubscriptionsTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: UserSubscriptionsTable
+    KeySchema:
+      - AttributeName: email
+        KeyType: HASH
+      - AttributeName: client_id
+        KeyType: RANGE
+    AttributeDefinitions:
+      - AttributeName: email
+        AttributeType: 'S'
+      - AttributeName: client_id
+        AttributeType: 'S'       
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1
+TransactionTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: TransactionTable
+    KeySchema:
+      - AttributeName: trans_id
+        KeyType: HASH
+    AttributeDefinitions:
+      - AttributeName: trans_id
+        AttributeType: 'S'
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1
+ProductTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: ProductTable
+    KeySchema:
+      - AttributeName: client_id
+        KeyType: HASH
+      - AttributeName: product_id
+        KeyType: RANGE 
+    AttributeDefinitions:
+      - AttributeName: client_id
+        AttributeType: 'S' 
+      - AttributeName: product_id
+        AttributeType: 'S'     
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1
+CategoryTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: CategoryTable
+    KeySchema:
+      - AttributeName: client_id
+        KeyType: HASH
+      - AttributeName: category_id
+        KeyType: RANGE 
+    AttributeDefinitions:
+      - AttributeName: client_id
+        AttributeType: 'S' 
+      - AttributeName: category_id
+        AttributeType: 'S'     
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1
+CartItemTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: CartItemTable
+    KeySchema:
+      - AttributeName: user_id
+        KeyType: HASH
+      - AttributeName: product_id
+        KeyType: RANGE 
+    AttributeDefinitions:
+      - AttributeName: user_id
+        AttributeType: 'S' 
+      - AttributeName: product_id
+        AttributeType: 'S'     
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1
+ShoppingOrderTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: ShoppingOrderTable
+    KeySchema:
+      - AttributeName: user_id
+        KeyType: HASH
+      - AttributeName: order_id
+        KeyType: RANGE 
+    AttributeDefinitions:
+      - AttributeName: user_id
+        AttributeType: 'S' 
+      - AttributeName: order_id 
+        AttributeType: 'S'     
+      - AttributeName: client_id 
+        AttributeType: 'S' 
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1
+    GlobalSecondaryIndexes:
+    - IndexName: myGSI
+      KeySchema:
+      - AttributeName: user_id
+        KeyType: HASH
+      Projection:
+        NonKeyAttributes:
+        - client_id
+        ProjectionType: INCLUDE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+CouponTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: CouponTable
+    KeySchema:
+      - AttributeName: client_id
+        KeyType: HASH
+      - AttributeName: code
+        KeyType: RANGE 
+    AttributeDefinitions:
+      - AttributeName: client_id
+        AttributeType: 'S'
+      - AttributeName: code
+        AttributeType: 'S'     
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1

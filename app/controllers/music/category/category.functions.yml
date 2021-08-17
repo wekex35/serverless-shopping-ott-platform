@@ -1,0 +1,27 @@
+getAllMusicCategory: 
+  handler: handler.getAllMusicCategory
+  events:
+    - http:
+        path: getAllMusicCategory
+        method: get
+
+addMusicCategory: 
+  handler: handler.addMusicCategory
+  events:
+    - http:
+        path: addMusicCategory
+        method: post
+
+updateMusicCategory: 
+  handler: handler.updateMusicCategory
+  events:
+    - http:
+        path: updateMusicCategory
+        method: post
+
+deleteMusicCategory:
+  handler: handler.deleteMusicCategory
+  events:
+    - http:
+        path: deleteMusicCategory
+        method: get

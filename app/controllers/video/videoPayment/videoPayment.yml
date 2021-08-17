@@ -1,0 +1,34 @@
+getVideoPaymentHistory: 
+  handler: handler.getVideoPaymentHistory
+  events:
+    - http:
+        path: getVideoPaymentHistory
+        method: get
+
+videoPayment: 
+  handler: handler.videoPayment
+  events:
+    - http:
+        path: videoPayment
+        method: post
+
+updateVideoPaymentStatus: 
+  handler: handler.updateVideoPaymentStatus
+  events:
+    - http:
+        path: updateVideoPaymentStatus
+        method: post
+
+deleteVideoPayment:
+  handler: handler.deleteVideoPayment
+  events:
+    - http:
+        path: deleteVideoPayment
+        method: get
+        
+videoPaymentIntent: 
+  handler: handler.videoPaymentIntent
+  events:
+    - http:
+        path: videoPaymentIntent
+        method: post
